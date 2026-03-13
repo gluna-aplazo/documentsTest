@@ -426,11 +426,78 @@ footer strong{color:#fff}
   </section>
 
   <section class="section">
+    <div class="card">
+      <span class="slabel">Requerimientos y dependencias</span>
+      <h2>¿Qué necesitamos para trabajar cualquier propuesta?</h2>
+      <p>Para llevar a cabo cualquiera de las tres propuestas se requiere el apoyo coordinado de tres equipos clave. Sin estos apoyos, la implementación no puede avanzar de forma segura ni sostenible.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px">
+
+        <div style="border-radius:var(--r-sm);border:1px solid var(--cyan-mid);overflow:hidden">
+          <div style="background:#00D4D8;padding:14px 18px;display:flex;align-items:center;gap:10px">
+            <div style="width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-weight:800;color:#0a1628;font-size:.9rem;flex-shrink:0">1</div>
+            <div>
+              <div style="font-weight:800;font-size:.95rem;color:#0a1628">Apoyo de Developers</div>
+              <div style="font-size:.75rem;color:rgba(10,22,40,.6)">1 dev por squad</div>
+            </div>
+          </div>
+          <div style="padding:16px 18px;background:var(--card);transition:background .3s">
+            <ul style="margin:0 0 0 16px;color:var(--muted)">
+              <li style="margin:8px 0;font-size:.9rem">Cambios en los <strong>Jenkinsfiles</strong> de los repositorios donde se va a trabajar.</li>
+              <li style="margin:8px 0;font-size:.9rem">Apoyo con la configuración y despliegue de <strong>Lambdas</strong>.</li>
+              <li style="margin:8px 0;font-size:.9rem"><strong>Pruebas unitarias</strong> que garanticen que los cambios no impacten el comportamiento actual de los repositorios.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="border-radius:var(--r-sm);border:1px solid #a7f3d0;overflow:hidden">
+          <div style="background:#0f766e;padding:14px 18px;display:flex;align-items:center;gap:10px">
+            <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:.9rem;flex-shrink:0">2</div>
+            <div>
+              <div style="font-weight:800;font-size:.95rem;color:#fff">QA Tooling Engineers</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.65)">Mantenimiento y gestión</div>
+            </div>
+          </div>
+          <div style="padding:16px 18px;background:var(--card);transition:background .3s">
+            <ul style="margin:0 0 0 16px;color:var(--muted)">
+              <li style="margin:8px 0;font-size:.9rem">Mantenimiento y gestión de <strong>Lambdas</strong> de automatización.</li>
+              <li style="margin:8px 0;font-size:.9rem">Actualización de <strong>frameworks y librerías</strong> para garantizar la correcta ejecución de los casos de prueba existentes y los que se estarán desarrollando.</li>
+              <li style="margin:8px 0;font-size:.9rem">Soporte técnico continuo sobre las herramientas de automatización del ecosistema Aplazo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="border-radius:var(--r-sm);border:1px solid #ddd6fe;overflow:hidden">
+          <div style="background:#7C3AED;padding:14px 18px;display:flex;align-items:center;gap:10px">
+            <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:.9rem;flex-shrink:0">3</div>
+            <div>
+              <div style="font-weight:800;font-size:.95rem;color:#fff">Apoyo de DevOps</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.65)">Accesos y configuración</div>
+            </div>
+          </div>
+          <div style="padding:16px 18px;background:var(--card);transition:background .3s">
+            <ul style="margin:0 0 0 16px;color:var(--muted)">
+              <li style="margin:8px 0;font-size:.9rem">Acceso o modificación a <strong>repositorios</strong> necesarios para implementar los cambios.</li>
+              <li style="margin:8px 0;font-size:.9rem">Gestión de <strong>Lambdas</strong> en el entorno de infraestructura de Aplazo.</li>
+              <li style="margin:8px 0;font-size:.9rem">Permisos y configuración en <strong>Jenkins</strong> para los nuevos jobs y stages.</li>
+              <li style="margin:8px 0;font-size:.9rem">Acceso a las <strong>tablas de base de datos en Stage</strong> para las validaciones</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:18px;padding:14px 16px;border-radius:var(--r-sm);background:var(--cyan-soft);border:1px solid var(--cyan-mid);font-size:.9rem;color:var(--muted);transition:background .3s,border .3s">
+        💡 <strong style="color:var(--cyan-dark)">Nota:</strong> Estos apoyos son transversales a las tres propuestas. Contar con ellos desde el inicio garantiza que la implementación sea segura, sostenible y no genere deuda técnica en los repositorios existentes.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="card conclusion">
       <span class="slabel">Conclusión</span>
       <h2>Una estrategia de calidad continua y end-to-end</h2>
-      <p>Las tres propuestas son <strong>complementarias</strong> y cubren el ciclo completo de calidad. La Propuesta 1 valida en el momento de la liberación, la Propuesta 2 integra la cobertura al flujo natural del ticket en Jira, y la Propuesta 3 cierra el ciclo con validaciones directas sobre la base de datos, alineadas al <strong>North Star</strong> de Aplazo.</p>
-      <p style="margin:0">La <strong>Propuesta 2 ya está funcionando</strong> — cuando un ticket pasa a Ready For QA, en segundos el equipo ve en Slack qué suite se ejecutó, sobre qué servicio y cuál fue el resultado, todo automáticamente y en el hilo del issue correspondiente.</p>
+      <p>Las tres propuestas son <strong>importantes</strong> y cumplen el ciclo completo de calidad. La Propuesta 1 valida en el momento de la liberación, la Propuesta 2 integra la cobertura al flujo natural del ticket en Jira, y la Propuesta 3 cierra el ciclo con validaciones directas sobre la base de datos</p>
     </div>
   </section>
 
