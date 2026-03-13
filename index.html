@@ -213,7 +213,7 @@ footer strong{color:#fff}
 
       <!-- P1 -->
       <div class="card proposal p1">
-        <span class="ptag">Propuesta 1</span>
+        <span class="ptag">Objetivo 1</span>
         <h2>Automatización desde pipelines de liberación</h2>
         <p>Incorporar un stage dentro del <strong>Jenkinsfile</strong> de cada proyecto. Al momento de hacer una liberación o ejecutar un pipeline en Stage, ese stage disparará automáticamente las pruebas asociadas al componente según la matriz de trazabilidad.</p>
         <h3>Funcionamiento</h3>
@@ -235,7 +235,7 @@ footer strong{color:#fff}
 
       <!-- P2 -->
       <div class="card proposal p2">
-        <span class="ptag">Propuesta 2</span>
+        <span class="ptag">Objetivo 2</span>
         <h2>Automatización por cambio de estado en Jira</h2>
         <p>Crear reglas en <strong>Jira Automation</strong> que disparen las pruebas de cobertura automáticamente cuando un ticket transite del estado <strong>In Progress</strong> al estado <strong>Ready For QA</strong>, ejecutando las suites asociadas al servicio impactado según la matriz de trazabilidad.</p>
 
@@ -268,7 +268,7 @@ footer strong{color:#fff}
 
       <!-- P3 -->
       <div class="card proposal p3">
-        <span class="ptag">Propuesta 3</span>
+        <span class="ptag">Objetivo 3</span>
         <h2>API de datos alineada al North Star de Aplazo</h2>
         <p>Basado en la propuesta del <strong>North Star</strong> en las metas de Aplazo, se implementaría un nuevo repositorio de servicios que haría consultas directas a la base de datos PostgreSQL según los parámetros recibidos en el request. Esto permitiría a las automatizaciones validar el estado real de los datos en cada ejecución.</p>
 
@@ -330,7 +330,7 @@ footer strong{color:#fff}
     <div class="demo">
       <span class="slabel">Implementación demostrada</span>
       <h2>Notificaciones Slack + Jira Rules en acción</h2>
-      <p class="dlead">La Propuesta 2 fue implementada y validada. El siguiente flujo muestra cómo funciona de extremo a extremo cuando un ticket pasa a Ready For QA.</p>
+      <p class="dlead">La Objetivo 2 fue implementada y validada. El siguiente flujo muestra cómo funciona de extremo a extremo cuando un ticket pasa a Ready For QA.</p>
 
       <p style="color:#c4f0f1;font-weight:700;font-size:.88rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em">Flujo técnico</p>
       <div class="flow">
@@ -396,7 +396,7 @@ footer strong{color:#fff}
   <section class="section">
     <div class="card">
       <span class="slabel">Historial de implementación</span>
-      <h2>Cómo se construyó la integración (Propuesta 2)</h2>
+      <h2>Cómo se construyó la integración (Objetivo 2)</h2>
       <div class="tl">
         <div class="tli"><div class="tli-t">Jira Automation Rule</div><div class="tli-d">Regla con trigger "Issue status changed" de <strong>In Progress</strong> a <strong>Ready For QA</strong> y acción Send web request apuntando a la Lambda.</div></div>
         <div class="tli"><div class="tli-t">Slack App — Webhook Notificaciones</div><div class="tli-d">App con scopes <code>chat:write</code>, <code>groups:history</code> y <code>channels:read</code> para postear y leer el canal privado.</div></div>
@@ -497,7 +497,7 @@ footer strong{color:#fff}
     <div class="card conclusion">
       <span class="slabel">Conclusión</span>
       <h2>Una estrategia de calidad continua y end-to-end</h2>
-      <p>Las tres propuestas son <strong>importantes</strong> y cumplen el ciclo completo de calidad. La Propuesta 1 valida en el momento de la liberación, la Propuesta 2 integra la cobertura al flujo natural del ticket en Jira, y la Propuesta 3 cierra el ciclo con validaciones directas sobre la base de datos</p>
+      <p>Las tres propuestas son <strong>importantes</strong> y cumplen el ciclo completo de calidad. La Objetivo 1 valida en el momento de la liberación, la Objetivo 2 integra la cobertura al flujo natural del ticket en Jira, y la Objetivo 3 cierra el ciclo con validaciones directas sobre la base de datos</p>
     </div>
   </section>
 
