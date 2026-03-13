@@ -13,24 +13,17 @@
   --card:#fff;--border:#d1f0f0;
   --r:14px;--r-sm:8px;
 }
-.dark{
-  --card:#0d2829;--border:#1e4445;--text:#e0fffe;--muted:#7fb8ba;
-  --cyan-soft:#0d2829;--cyan-mid:#1e4445;
-}
+.dark{--card:#0d2829;--border:#1e4445;--text:#e0fffe;--muted:#7fb8ba;--cyan-soft:#0d2829;--cyan-mid:#1e4445}
 body{font-family:Inter,Segoe UI,Arial,sans-serif;background:#f4fefe;color:var(--text);line-height:1.6;transition:background .3s,color .3s}
 body.dark{background:#061516}
-a{color:var(--cyan-dark);text-decoration:none}
 code{background:var(--cyan-soft);border:1px solid var(--cyan-mid);border-radius:4px;padding:1px 7px;font-size:.85em;font-family:monospace;color:var(--cyan-dark)}
-body.dark code{background:#0d2829;border-color:#1e4445;color:#7ffcfc}
+body.dark code{background:#0d3535;border-color:#1e5557;color:#7ffcfc}
 
-/* NAV */
 nav{background:var(--dark);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:100}
-.nav-logo{display:flex;align-items:center;gap:10px}
 .logo-cap{background:var(--cyan);border-radius:999px;padding:5px 14px;font-weight:900;font-size:1rem;color:#0a1628;letter-spacing:-.5px}
 .logo-cap span{opacity:.5;font-size:.7rem;font-weight:700;margin-left:6px}
-.nav-right{display:flex;align-items:center;gap:16px}
+.nav-right{display:flex;align-items:center;gap:10px}
 .nav-label{font-size:.8rem;color:#7ffcfc;opacity:.7}
-.toggle-wrap{display:flex;align-items:center;gap:8px}
 .toggle{position:relative;width:42px;height:24px;cursor:pointer}
 .toggle input{opacity:0;width:0;height:0}
 .toggle-slider{position:absolute;inset:0;background:#1e4445;border-radius:999px;transition:.3s}
@@ -38,24 +31,17 @@ nav{background:var(--dark);padding:0 32px;display:flex;align-items:center;justif
 .toggle input:checked+.toggle-slider{background:var(--cyan)}
 .toggle input:checked+.toggle-slider::before{transform:translateX(18px);background:#0a1628}
 
-/* HERO */
 .hero{background:#0a1e1f;padding:64px 40px 56px;color:#fff}
-.hero h1{color:#fff}
-.hero p{color:rgba(255,255,255,.65)}
-.hero .badge{background:rgba(0,212,216,.15);color:#00D4D8;border-color:rgba(0,212,216,.3)}
-.hero-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:36px}
-.badge{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(0,0,0,.1);color:#0a1628;font-weight:600;font-size:.82rem;border:1px solid rgba(0,0,0,.12)}
-.hero h1{font-size:clamp(1.7rem,4vw,2.9rem);font-weight:800;line-height:1.15;margin-bottom:16px;max-width:820px}
-.hero p{font-size:1.05rem;opacity:.75;max-width:700px}
+.hero h1{color:#fff;font-size:clamp(1.7rem,4vw,2.9rem);font-weight:800;line-height:1.15;margin-bottom:16px;max-width:820px}
+.hero p{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:700px}
+.badge{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(0,212,216,.15);color:#00D4D8;font-weight:600;font-size:.82rem;border:1px solid rgba(0,212,216,.3);margin-bottom:24px}
 
-/* STATS */
 .stats{background:#007a7d;display:flex;flex-wrap:wrap}
 .stat{flex:1;min-width:150px;padding:20px 28px;border-right:1px solid rgba(255,255,255,.12);color:#fff}
 .stat:last-child{border-right:none}
 .stat-n{font-size:1.9rem;font-weight:800;color:#7ffcfc}
 .stat-l{font-size:.82rem;opacity:.75;margin-top:2px}
 
-/* MAIN */
 .wrap{width:min(1120px,92%);margin:0 auto;padding:0 0 48px}
 .section{padding:40px 0 0}
 .slabel{display:inline-block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan-dark);margin-bottom:8px}
@@ -66,35 +52,41 @@ p{margin-bottom:12px}
 ul{margin:6px 0 0 20px}
 li{margin:7px 0}
 
-/* CARDS */
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:20px;transition:background .3s,border .3s}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
 .proposal{position:relative;overflow:hidden;padding-left:34px}
-.proposal::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,#00D4D8,#008f92);border-radius:5px 0 0 5px}
-.proposal.p2::before{background:linear-gradient(180deg,#0f766e,#34d399)}
-.ptag{display:inline-block;padding:5px 12px;border-radius:999px;font-weight:700;font-size:.8rem;background:var(--cyan-soft);color:var(--cyan-dark);margin-bottom:12px;border:1px solid var(--cyan-mid)}
-body.dark .ptag{background:#0d3535;border-color:#1e5557;color:#7ffcfc}
+.proposal::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;border-radius:5px 0 0 5px}
+.p1::before{background:linear-gradient(180deg,#00D4D8,#008f92)}
+.p2::before{background:linear-gradient(180deg,#0f766e,#34d399)}
+.p3::before{background:linear-gradient(180deg,#7C3AED,#a78bfa)}
+.ptag{display:inline-block;padding:5px 12px;border-radius:999px;font-weight:700;font-size:.8rem;margin-bottom:12px;border:1px solid}
+.p1 .ptag{background:var(--cyan-soft);color:var(--cyan-dark);border-color:var(--cyan-mid)}
 .p2 .ptag{background:#f0fdf9;color:#0f766e;border-color:#a7f3d0}
+.p3 .ptag{background:#f5f3ff;color:#7C3AED;border-color:#ddd6fe}
+body.dark .p1 .ptag{background:#0d3535;border-color:#1e5557;color:#7ffcfc}
 body.dark .p2 .ptag{background:#0a2620;border-color:#134e40;color:#34d399}
+body.dark .p3 .ptag{background:#1e1040;border-color:#4c3a8a;color:#a78bfa}
 
-/* STEPS */
 .steps{counter-reset:s;display:grid;gap:10px;margin-top:12px}
 .step{border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 14px 12px 52px;background:var(--cyan-soft);position:relative;font-size:.93rem;transition:background .3s,border .3s}
 body.dark .step{background:#061b1c}
-.step::before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:50%;background:#00D4D8;color:#0a1628;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.88rem}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:50%;color:#0a1628;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.88rem}
+.p1 .step::before{background:#00D4D8}
 .p2 .step::before{background:#0f766e;color:#fff}
+.p3 .step::before{background:#7C3AED;color:#fff}
 
-/* TABLES */
 table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.9rem;border-radius:var(--r-sm);overflow:hidden}
 th,td{padding:11px 14px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
-th{background:var(--cyan-soft);color:var(--cyan-dark);font-weight:700;font-size:.85rem}
-body.dark th{background:#0d3535;color:#7ffcfc}
+th{font-weight:700;font-size:.85rem}
+.p1 th{background:var(--cyan-soft);color:var(--cyan-dark)}
 .p2 th{background:#f0fdf9;color:#0f766e}
+.p3 th{background:#f5f3ff;color:#7C3AED}
+body.dark th{background:#0d3535;color:#7ffcfc}
 body.dark .p2 th{background:#0a2620;color:#34d399}
+body.dark .p3 th{background:#1e1040;color:#a78bfa}
 tr:last-child td{border-bottom:none}
 body.dark td{border-color:#1e4445}
 
-/* METRICS */
 .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px}
 .metric{padding:18px;border-radius:var(--r-sm);background:var(--cyan-soft);border:1px solid var(--cyan-mid);transition:background .3s,border .3s}
 body.dark .metric{background:#0d3535;border-color:#1e5557}
@@ -102,7 +94,30 @@ body.dark .metric{background:#0d3535;border-color:#1e5557}
 body.dark .metric strong{color:#7ffcfc}
 .metric p{font-size:.88rem;margin:0;color:var(--muted)}
 
-/* DEMO DARK SECTION */
+/* STATUS FLOW */
+.status-flow{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin:14px 0}
+.status-node{padding:10px 16px;border-radius:999px;font-size:.85rem;font-weight:700;border:2px solid}
+.status-node.gray{background:#f3f4f6;color:#6b7280;border-color:#d1d5db}
+.status-node.active{background:#0f766e;color:#fff;border-color:#0f766e}
+.status-node.trigger{background:#00D4D8;color:#0a1628;border-color:#00D4D8}
+.status-arrow{padding:0 8px;color:var(--muted);font-size:1rem}
+.trigger-label{display:inline-block;background:#fef3c7;border:1px solid #fcd34d;border-radius:6px;padding:4px 10px;font-size:.78rem;font-weight:700;color:#92400e;margin-left:8px}
+body.dark .status-node.gray{background:#1e2a2b;color:#7fb8ba;border-color:#2d4445}
+
+/* FILE TREE */
+.tree{background:#0f172a;border-radius:var(--r-sm);padding:18px 20px;font-family:monospace;font-size:.85rem;line-height:1.8;color:#94a3b8;margin-top:12px}
+.tree .dir{color:#7ffcfc;font-weight:700}
+.tree .file{color:#cbd5e1}
+.tree .file.hl{color:#a78bfa}
+.tree .comment{color:#475569;font-size:.8rem}
+
+/* NORTH STAR */
+.northstar{background:linear-gradient(135deg,#1e1040,#2d1b69);border-radius:var(--r);padding:28px;margin-top:12px;border:1px solid #4c3a8a}
+.northstar h3{color:#c4b5fd;margin-top:0}
+.northstar p{color:#a5b4fc;font-size:.92rem}
+.ns-pill{display:inline-block;background:rgba(167,139,250,.15);border:1px solid rgba(167,139,250,.3);border-radius:999px;padding:4px 12px;font-size:.8rem;color:#c4b5fd;margin:3px}
+
+/* DEMO */
 .demo{background:var(--dark2);border-radius:var(--r);padding:32px;margin-bottom:20px}
 .demo h2{color:#fff}
 .demo .slabel{color:#7ffcfc}
@@ -111,7 +126,6 @@ body.dark .metric strong{color:#7ffcfc}
 .fnode{background:rgba(0,212,216,.08);border:1px solid rgba(0,212,216,.2);border-radius:var(--r-sm);padding:10px 15px;font-size:.82rem;color:#e0fffe;white-space:nowrap}
 .farrow{font-size:1rem;color:#00D4D8;padding:0 6px}
 
-/* SLACK PREVIEW */
 .slack{background:#1a1d21;border-radius:var(--r-sm);padding:20px;border:1px solid #2d3139}
 .sch{font-size:.78rem;color:#9ea3b0;margin-bottom:14px;display:flex;align-items:center;gap:6px}
 .sch::before{content:"🔒";font-size:12px}
@@ -130,7 +144,6 @@ body.dark .metric strong{color:#7ffcfc}
 .sblock.run{border-left-color:#00D4D8}
 .sreplies{font-size:.75rem;color:#6b7280;margin-top:5px}
 
-/* TIMELINE */
 .tl{position:relative;padding-left:26px;margin-top:14px}
 .tl::before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:var(--border)}
 .tli{position:relative;margin-bottom:18px}
@@ -139,27 +152,24 @@ body.dark .metric strong{color:#7ffcfc}
 body.dark .tli-t{color:#7ffcfc}
 .tli-d{font-size:.87rem;color:var(--muted);margin-top:3px}
 
-/* CONCLUSION */
 .conclusion{border-left:5px solid #00D4D8;background:linear-gradient(135deg,var(--cyan-soft),var(--card));border-radius:0 var(--r) var(--r) 0}
 body.dark .conclusion{background:linear-gradient(135deg,#0d3535,var(--card))}
 
-/* FOOTER */
-footer{background:var(--dark);color:#7ffcfc;padding:28px 0;text-align:center;font-size:.88rem;margin-top:0}
+footer{background:var(--dark);color:#7ffcfc;padding:28px 0;text-align:center;font-size:.88rem}
 footer strong{color:#fff}
 
 @media(max-width:640px){
   .flow{flex-direction:column;align-items:flex-start}
   .stat{min-width:50%;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .hero{padding:40px 20px 36px}
+  .status-flow{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">
-    <div class="logo-cap">aplazo <span>QA</span></div>
-  </div>
+  <div class="logo-cap">aplazo <span>QA</span></div>
   <div class="nav-right">
     <span class="nav-label" id="mode-label">Light</span>
     <label class="toggle">
@@ -170,18 +180,15 @@ footer strong{color:#fff}
 </nav>
 
 <div class="hero">
-  <div class="hero-top">
-    <span class="badge">Estrategia de Automatización 2026</span>
-  </div>
+  <span class="badge">Estrategia de Automatización 2026</span>
   <h1>Propuestas para automatizar ejecuciones de cobertura y regresión</h1>
-  <p>Dos propuestas complementarias para acelerar la validación de cambios, fortalecer la trazabilidad entre servicios y flujos funcionales, y mejorar la visibilidad de resultados mediante notificaciones automáticas en Slack.</p>
+  <p>Tres propuestas complementarias para acelerar la validación de cambios, fortalecer la trazabilidad entre servicios y flujos funcionales, y mejorar la visibilidad de resultados mediante notificaciones automáticas en Slack.</p>
 </div>
 
 <div class="stats">
-  <div class="stat"><div class="stat-n">2</div><div class="stat-l">Propuestas complementarias</div></div>
+  <div class="stat"><div class="stat-n">3</div><div class="stat-l">Propuestas complementarias</div></div>
   <div class="stat"><div class="stat-n">0</div><div class="stat-l">Disparos manuales requeridos</div></div>
   <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Trazabilidad ticket → resultado</div></div>
-  <div class="stat"><div class="stat-n">Slack</div><div class="stat-l">Canal de notificación en tiempo real</div></div>
 </div>
 
 <div class="wrap">
@@ -192,26 +199,27 @@ footer strong{color:#fff}
       <h2>¿Por qué automatizar las ejecuciones?</h2>
       <p>Actualmente la ejecución de pruebas de cobertura y regresión depende de disparos manuales, lo que genera brechas de validación, falta de visibilidad y retrasos en la detección de defectos. Estas propuestas buscan integrar la calidad directamente en el proceso de desarrollo y gestión de tickets, haciendo que las pruebas corran automáticamente en el momento correcto y que los resultados lleguen al equipo sin intervención humana.</p>
       <div class="metrics">
-        <div class="metric"><strong>Detección temprana</strong><p>Identificar defectos antes de que lleguen a producción, reduciendo el costo de corrección.</p></div>
+        <div class="metric"><strong>Detección temprana</strong><p>Identificar defectos antes de que lleguen a producción.</p></div>
         <div class="metric"><strong>Trazabilidad completa</strong><p>Relacionar cada cambio con su cobertura ejecutada y el resultado obtenido.</p></div>
-        <div class="metric"><strong>Visibilidad inmediata</strong><p>Notificar a los equipos técnicos y de negocio en tiempo real vía Slack.</p></div>
-        <div class="metric"><strong>Menos carga manual</strong><p>Liberar al equipo de QA de tareas repetitivas de seguimiento y ejecución.</p></div>
+        <div class="metric"><strong>Visibilidad inmediata</strong><p>Notificar a los equipos en tiempo real vía Slack.</p></div>
+        <div class="metric"><strong>Menos carga manual</strong><p>Liberar al equipo de QA de tareas repetitivas de seguimiento.</p></div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <span class="slabel">Propuestas</span>
-    <div class="grid2">
-      <div class="card proposal">
+    <div class="grid3">
+
+      <!-- P1 -->
+      <div class="card proposal p1">
         <span class="ptag">Propuesta 1</span>
         <h2>Automatización desde pipelines de liberación</h2>
-        <p>Retomar las herramientas existentes e incorporar un stage dentro del <strong>Jenkinsfile</strong> de cada proyecto. Al momento de hacer una liberación o ejecutar un pipeline en Stage, ese stage disparará automáticamente las pruebas asociadas al componente.</p>
+        <p>Incorporar un stage dentro del <strong>Jenkinsfile</strong> de cada proyecto. Al momento de hacer una liberación o ejecutar un pipeline en Stage, ese stage disparará automáticamente las pruebas asociadas al componente según la matriz de trazabilidad.</p>
         <h3>Funcionamiento</h3>
-        <div class="steps">
-          <div class="step">Se realiza una liberación o se ejecuta el pipeline en el entorno Stage.</div>
-          <div class="step">El nuevo stage en el Jenkinsfile invoca las suites vinculadas al proyecto.</div>
-          <div class="step">La selección se determina mediante una <strong>matriz de trazabilidad</strong> que relaciona servicios con flujos funcionales.</div>
+        <div class="steps p1">
+          <div class="step">Se realiza una liberación o se ejecuta el pipeline en Stage.</div>
+          <div class="step">El stage en el Jenkinsfile invoca las suites vinculadas al proyecto por la matriz de trazabilidad.</div>
           <div class="step">Al concluir, se envía notificación automática a Slack con resultado, build number y enlace a evidencia.</div>
         </div>
         <h3>Matriz de trazabilidad</h3>
@@ -223,78 +231,134 @@ footer strong{color:#fff}
             <tr><td>Disponibilidad</td><td>Product Availability, batch</td><td>Cobertura disponibilidad</td></tr>
           </tbody>
         </table>
-        <h3>Beneficios</h3>
-        <ul>
-          <li>Validaciones automáticas integradas en el proceso de liberación.</li>
-          <li>Reducción de dependencia de disparos manuales para cobertura crítica.</li>
-          <li>Detección temprana de defectos antes de promover cambios.</li>
-        </ul>
       </div>
 
+      <!-- P2 -->
       <div class="card proposal p2">
         <span class="ptag">Propuesta 2</span>
-        <h2>Automatización por reglas de Jira</h2>
-        <p>Crear reglas en <strong>Jira Automation</strong> para disparar pruebas cuando un ticket cambie de estado o cuando se agregue un comentario específico. La regla identifica el servicio impactado y ejecuta las pruebas correspondientes automáticamente.</p>
+        <h2>Automatización por cambio de estado en Jira</h2>
+        <p>Crear reglas en <strong>Jira Automation</strong> que disparen las pruebas de cobertura automáticamente cuando un ticket transite del estado <strong>In Progress</strong> al estado <strong>Ready For QA</strong>, ejecutando las suites asociadas al servicio impactado según la matriz de trazabilidad.</p>
+
+        <h3>Disparador de estado</h3>
+        <div class="status-flow">
+          <div class="status-node gray">In Progress</div>
+          <div class="status-arrow">→</div>
+          <div class="status-node trigger">Ready For QA <span style="font-size:.7rem;margin-left:4px">⚡</span></div>
+          <span class="trigger-label">Dispara automatización</span>
+        </div>
+
         <h3>Funcionamiento</h3>
         <div class="steps p2">
-          <div class="step">Un ticket cambia de estado <em>o</em> un usuario agrega un comentario como <code>validate-signup</code>.</div>
-          <div class="step">La regla llama a una <strong>AWS Lambda</strong> vía webhook con los datos del ticket.</div>
-          <div class="step">La Lambda postea el contexto en Slack y dispara el job en <strong>Jenkins</strong> con el tag del flujo.</div>
-          <div class="step">Jenkins ejecuta la suite. La Lambda hace polling y actualiza el hilo de Slack con el resultado.</div>
+          <div class="step">Un ticket transita de <strong>In Progress</strong> a <strong>Ready For QA</strong> en Jira.</div>
+          <div class="step">La regla identifica el servicio o componente afectado por el ticket.</div>
+          <div class="step">Según la matriz de trazabilidad, se disparan las pruebas de cobertura del servicio correspondiente.</div>
+          <div class="step">Se notifica en Slack qué ejecución se lanzó, sobre qué servicio y el resultado obtenido.</div>
         </div>
-        <h3>Disparadores configurados</h3>
+
+        <h3>Relación estado → cobertura ejecutada</h3>
         <table>
-          <thead><tr><th>Disparador</th><th>Acción</th><th>Job</th></tr></thead>
+          <thead><tr><th>Servicio afectado</th><th>Cobertura disparada</th><th>Job Jenkins</th></tr></thead>
           <tbody>
-            <tr><td><code>validate-signup</code></td><td>Smoke de signup</td><td><code>webAutomation</code></td></tr>
-            <tr><td>Estado → Incubate</td><td>Cobertura del servicio</td><td>Según trazabilidad</td></tr>
-            <tr><td>Estado → Ready for QA</td><td>Smoke crítico</td><td>Según trazabilidad</td></tr>
-            <tr><td>Estado → Release Candidate</td><td>Regresión prioritaria</td><td>Según trazabilidad</td></tr>
+            <tr><td>Originación / Signup</td><td>Smoke signup + regresión crítica</td><td><code>webAutomation</code></td></tr>
+            <tr><td>Checkout</td><td>Suite principal checkout</td><td><code>webAutomation</code></td></tr>
+            <tr><td>Disponibilidad</td><td>Cobertura disponibilidad</td><td><code>webAutomation</code></td></tr>
           </tbody>
         </table>
+      </div>
+
+      <!-- P3 -->
+      <div class="card proposal p3">
+        <span class="ptag">Propuesta 3</span>
+        <h2>API de datos alineada al North Star de Aplazo</h2>
+        <p>Basado en la propuesta del <strong>North Star</strong> en las metas de Aplazo, se implementaría un nuevo repositorio de servicios que haría consultas directas a la base de datos PostgreSQL según los parámetros recibidos en el request. Esto permitiría a las automatizaciones validar el estado real de los datos en cada ejecución.</p>
+
+        <div class="northstar">
+          <h3>Alineación con el North Star</h3>
+          <p>Este servicio habilitaría validaciones de datos reales en cada prueba automatizada, cerrando el ciclo entre la ejecución de pruebas UI/API y la verificación del estado final en base de datos.</p>
+          <div style="margin-top:10px">
+            <span class="ns-pill">Validación de datos reales</span>
+            <span class="ns-pill">Trazabilidad end-to-end</span>
+            <span class="ns-pill">PostgreSQL directo</span>
+            <span class="ns-pill">Parametrizable por request</span>
+          </div>
+        </div>
+
+        <h3>Estructura del repositorio</h3>
+        <div class="tree">
+          <div><span class="dir">api-dev-postgres/</span></div>
+          <div>&nbsp;├─ <span class="dir">src/</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">app.js</span> <span class="comment">← Express + middlewares</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">server.js</span> <span class="comment">← levanta el servidor</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">db.js</span> <span class="comment">← conecta a PostgreSQL</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">routes/</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.routes.js</span> <span class="comment">← define endpoints</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">controllers/</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.controller.js</span> <span class="comment">← valida y responde</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">queries/</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.queries.js</span> <span class="comment">← queries SQL</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">middlewares/</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">error.middleware.js</span> <span class="comment">← centraliza errores</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;└─ <span class="dir">utils/</span></div>
+          <div>&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <span class="file">validate.js</span> <span class="comment">← validaciones de params</span></div>
+          <div>&nbsp;├─ <span class="file">.env</span></div>
+          <div>&nbsp;├─ <span class="file">.env.example</span></div>
+          <div>&nbsp;├─ <span class="file">package.json</span></div>
+          <div>&nbsp;└─ <span class="file">README.md</span></div>
+        </div>
+
+        <h3>Funcionamiento</h3>
+        <div class="steps p3">
+          <div class="step">La automatización envía un request al servicio con los parámetros del caso de prueba (usuario, transacción, estado esperado).</div>
+          <div class="step">El controller valida los parámetros y ejecuta la query correspondiente en PostgreSQL.</div>
+          <div class="step">El resultado de la consulta se devuelve al test para validar que el estado en base de datos sea el esperado.</div>
+          <div class="step">Si hay discrepancia, el test falla con contexto claro del dato incorrecto en BD.</div>
+        </div>
+
         <h3>Beneficios</h3>
         <ul>
-          <li>La cobertura se convierte en parte natural del workflow del ticket.</li>
-          <li>Trazabilidad completa: ticket → ejecución → resultado → evidencia.</li>
-          <li>Coordinación mejorada entre desarrollo, QA y negocio.</li>
+          <li>Validaciones de datos reales sin depender de mocks o stubs.</li>
+          <li>Cierra el ciclo de calidad: UI → API → Base de datos.</li>
+          <li>Parametrizable para cualquier servicio o entidad de Aplazo.</li>
+          <li>Alineado a la visión North Star de trazabilidad end-to-end.</li>
         </ul>
       </div>
     </div>
   </section>
 
+  <!-- DEMO -->
   <section class="section">
     <div class="demo">
       <span class="slabel">Implementación demostrada</span>
       <h2>Notificaciones Slack + Jira Rules en acción</h2>
-      <p class="dlead">La Propuesta 2 fue implementada y validada en el entorno de Aplazo. El siguiente flujo muestra exactamente cómo funciona de extremo a extremo.</p>
+      <p class="dlead">La Propuesta 2 fue implementada y validada. El siguiente flujo muestra cómo funciona de extremo a extremo cuando un ticket pasa a Ready For QA.</p>
 
       <p style="color:#c4f0f1;font-weight:700;font-size:.88rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em">Flujo técnico</p>
       <div class="flow">
-        <div class="fnode">💬 Jira<br><small style="opacity:.6">validate-signup</small></div>
+        <div class="fnode">🎫 Jira<br><small style="opacity:.6">In Progress → Ready For QA</small></div>
         <div class="farrow">→</div>
-        <div class="fnode">📋 Jira Automation<br><small style="opacity:.6">Comment trigger</small></div>
+        <div class="fnode">📋 Jira Automation<br><small style="opacity:.6">Status change rule</small></div>
         <div class="farrow">→</div>
         <div class="fnode">⚡ AWS Lambda<br><small style="opacity:.6">jira-slack-bot-trigger</small></div>
         <div class="farrow">→</div>
-        <div class="fnode">🔔 Slack<br><small style="opacity:.6">#personal-testing</small></div>
+        <div class="fnode">🔔 Slack<br><small style="opacity:.6">#qa-notifications</small></div>
         <div class="farrow">→</div>
-        <div class="fnode">🏗 Jenkins<br><small style="opacity:.6">webAutomation</small></div>
+        <div class="fnode">🏗 Jenkins<br><small style="opacity:.6">suite por servicio</small></div>
         <div class="farrow">→</div>
         <div class="fnode" style="border-color:rgba(34,197,94,.4)">✅ Resultado<br><small style="opacity:.6">en el hilo</small></div>
       </div>
 
       <p style="color:#c4f0f1;font-weight:700;font-size:.88rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em">Vista real del canal en Slack</p>
       <div class="slack">
-        <div class="sch">personal-testing</div>
+        <div class="sch">qa-notifications</div>
         <div class="smsg">
           <div class="sav wh">W</div>
           <div class="sbody">
             <div class="sname">Webhook Notificaciones <span>APP · hace 2 min</span></div>
             <div class="sblock">
-              <b>Issue:</b> FRAC-2168<br>
+              <b>Issue:</b> FRAC-2168 · Estado: <b style="color:#00D4D8">Ready For QA</b><br>
               <b>Resumen:</b> [Checkout engine] - Actualización de cálculos PF y mejora de código<br>
-              <b>Comentario:</b> validate-signup<br>
-              <b>Usuario:</b> Gerardo Luna Ventura
+              <b>Servicio:</b> Checkout<br>
+              <b>Asignado a:</b> Gerardo Luna Ventura
             </div>
             <div class="sreplies">🧵 2 replies · Last reply just now</div>
           </div>
@@ -305,22 +369,11 @@ footer strong{color:#fff}
             <div class="sbody">
               <div class="sname">Webhook Notificaciones <span>APP</span></div>
               <div class="sblock">
-                🚀 <b>Iniciando automatización</b><br>
-                <b>Flujo:</b> <span class="t">Create new user from checkout virtual card</span><br>
+                🚀 <b>Iniciando cobertura por trazabilidad</b><br>
+                <b>Servicio:</b> Checkout<br>
+                <b>Suite:</b> <span class="t">Suite principal checkout</span><br>
                 <b>Tag:</b> <span class="t">@createNewCustomerCheckoutVC</span><br>
-                <b>Job:</b> <span class="t">webAutomation</span><br>
-                <b>Disparado por:</b> Gerardo Luna Ventura
-              </div>
-            </div>
-          </div>
-          <div class="smsg">
-            <div class="sav wh">W</div>
-            <div class="sbody">
-              <div class="sname">Webhook Notificaciones <span>APP</span></div>
-              <div class="sblock run">
-                ⏳ <b>Build corriendo</b> · Build: #4295<br>
-                <b>Tag:</b> <span class="t">@createNewCustomerCheckoutVC</span><br>
-                <i style="color:#6b7280">Verificando cada 10s...</i>
+                <b>Job:</b> <span class="t">webAutomation</span>
               </div>
             </div>
           </div>
@@ -343,72 +396,41 @@ footer strong{color:#fff}
   <section class="section">
     <div class="card">
       <span class="slabel">Historial de implementación</span>
-      <h2>Cómo se construyó la integración</h2>
-      <p>La Propuesta 2 fue implementada iterativamente, resolviendo cada capa de integración:</p>
+      <h2>Cómo se construyó la integración (Propuesta 2)</h2>
       <div class="tl">
-        <div class="tli"><div class="tli-t">Jira Automation Rule</div><div class="tli-d">Regla con trigger "Comment added", condición <code>{{comment}} contains validate-signup</code> y acción Send web request apuntando a la Lambda.</div></div>
-        <div class="tli"><div class="tli-t">Slack App — Webhook Notificaciones</div><div class="tli-d">App con scopes <code>chat:write</code>, <code>groups:history</code> y <code>channels:read</code> para postear mensajes y leer el historial del canal privado.</div></div>
-        <div class="tli"><div class="tli-t">AWS Lambda — jira-slack-bot-trigger</div><div class="tli-d">Lambda en Node.js 20.x con Function URL pública. Recibe el payload de Jira, postea el mensaje en Slack, dispara Jenkins y hace polling del resultado cada 10s.</div></div>
-        <div class="tli"><div class="tli-t">Jenkins Integration</div><div class="tli-d">La Lambda llama a <code>buildWithParameters</code> con el token de seguridad y el parámetro <code>AUTOMATION_TESTS_TAG</code> correspondiente al flujo mapeado.</div></div>
-        <div class="tli"><div class="tli-t">Resultado en Slack</div><div class="tli-d">El mensaje de "Build encolado" se actualiza automáticamente en el hilo con ✅ SUCCESS / ❌ FAILURE incluyendo build number, duración y link a Jenkins.</div></div>
+        <div class="tli"><div class="tli-t">Jira Automation Rule</div><div class="tli-d">Regla con trigger "Issue status changed" de <strong>In Progress</strong> a <strong>Ready For QA</strong> y acción Send web request apuntando a la Lambda.</div></div>
+        <div class="tli"><div class="tli-t">Slack App — Webhook Notificaciones</div><div class="tli-d">App con scopes <code>chat:write</code>, <code>groups:history</code> y <code>channels:read</code> para postear y leer el canal privado.</div></div>
+        <div class="tli"><div class="tli-t">AWS Lambda — jira-slack-bot-trigger</div><div class="tli-d">Lambda en Node.js 20.x con Function URL pública. Recibe el payload de Jira, identifica el servicio, postea en Slack, dispara Jenkins y hace polling del resultado cada 10s.</div></div>
+        <div class="tli"><div class="tli-t">Matriz de trazabilidad en FLOW_MAP</div><div class="tli-d">La Lambda contiene el mapeo servicio → tag → job. Al recibir el ticket identifica qué suite ejecutar según el componente afectado.</div></div>
+        <div class="tli"><div class="tli-t">Resultado en Slack</div><div class="tli-d">El mensaje se actualiza automáticamente en el hilo con ✅ SUCCESS / ❌ FAILURE incluyendo build number, duración y link a Jenkins.</div></div>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="card">
-      <span class="slabel">Configuración</span>
-      <h2>Mapeo de comentarios → flujos Jenkins</h2>
-      <p>El <code>FLOW_MAP</code> en la Lambda define qué job y tag se disparan para cada comentario de Jira. Es fácilmente extensible:</p>
-      <table>
-        <thead><tr><th>Comentario en Jira</th><th>Tag Jenkins</th><th>Job</th><th>Plataforma</th></tr></thead>
-        <tbody>
-          <tr><td><code>validate-signup</code></td><td><code>@createNewCustomerCheckoutVC</code></td><td><code>webAutomation</code></td><td>Web</td></tr>
-          <tr><td><code>validate-payments</code></td><td><code>@OfflineApiMsPayments</code></td><td><code>webAutomation</code></td><td>Web</td></tr>
-          <tr><td><em>+ cualquier flujo nuevo</em></td><td><em>Tag correspondiente</em></td><td><em>Job correspondiente</em></td><td><em>Web / Android / iOS</em></td></tr>
-        </tbody>
-      </table>
     </div>
   </section>
 
   <section class="section">
     <div class="card">
       <span class="slabel">Comparativo</span>
-      <h2>Propuesta 1 vs Propuesta 2</h2>
+      <h2>Las tres propuestas</h2>
       <table>
-        <thead><tr><th>Criterio</th><th>Propuesta 1 · Pipeline / Jenkins</th><th>Propuesta 2 · Jira Rules + Lambda</th></tr></thead>
+        <thead><tr><th>Criterio</th><th>P1 · Pipeline</th><th>P2 · Jira Rules</th><th>P3 · API de datos</th></tr></thead>
         <tbody>
-          <tr><td>Momento de ejecución</td><td>Durante liberación o pipeline en Stage</td><td>Durante el avance del ticket o por comentario</td></tr>
-          <tr><td>Disparador</td><td>Stage en Jenkinsfile</td><td>Regla de automatización en Jira</td></tr>
-          <tr><td>Base de selección</td><td>Matriz de trazabilidad por servicio</td><td>Comentario o estado del ticket + FLOW_MAP</td></tr>
-          <tr><td>Infraestructura</td><td>Modificar Jenkinsfile de cada repo</td><td>AWS Lambda + Slack App + Jira Rule</td></tr>
-          <tr><td>Estado actual</td><td>Propuesto</td><td><strong>✅ Implementado y funcionando</strong></td></tr>
+          <tr><td>Disparador</td><td>Stage en Jenkinsfile</td><td>Cambio de estado en Jira</td><td>Request desde la automatización</td></tr>
+          <tr><td>Momento</td><td>Durante liberación / Stage</td><td>In Progress → Ready For QA</td><td>Dentro de cada caso de prueba</td></tr>
+          <tr><td>Selección de pruebas</td><td>Matriz de trazabilidad por servicio</td><td>Servicio del ticket + FLOW_MAP</td><td>Query parametrizable por el test</td></tr>
+          <tr><td>Objetivo</td><td>Validación al momento de entrega</td><td>Validación al avanzar el ticket</td><td>Validación de datos en BD</td></tr>
+          <tr><td>Alineación</td><td>CI/CD</td><td>Workflow de QA</td><td>North Star Aplazo</td></tr>
+          <tr><td>Estado</td><td>Propuesto</td><td><strong>✅ Implementado</strong></td><td>Propuesto</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
   <section class="section">
-    <div class="card">
-      <span class="slabel">Notificaciones</span>
-      <h2>Visibilidad y comunicación automática</h2>
-      <p>Cada notificación en Slack incluye el contexto completo del ticket y la ejecución:</p>
-      <div class="metrics">
-        <div class="metric"><strong>Contexto del ticket</strong><p>Issue key, resumen, comentario que disparó la ejecución y usuario responsable.</p></div>
-        <div class="metric"><strong>Detalle de la ejecución</strong><p>Flujo, tag, job de Jenkins, número de build y entorno.</p></div>
-        <div class="metric"><strong>Resultado en tiempo real</strong><p>✅ SUCCESS / ❌ FAILURE / ⚠️ UNSTABLE con duración y link a Jenkins.</p></div>
-        <div class="metric"><strong>Hilo organizado</strong><p>Todo el contexto y ejecuciones viven en el mismo hilo de Slack.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
     <div class="card conclusion">
       <span class="slabel">Conclusión</span>
-      <h2>Una estrategia de calidad continua</h2>
-      <p>Ambas propuestas son <strong>complementarias</strong>. La automatización en pipelines fortalece la validación técnica al momento de la liberación, mientras que la automatización en Jira integra la cobertura al flujo natural del trabajo diario.</p>
-      <p>La <strong>Propuesta 2 ya está funcionando</strong> en Aplazo — cualquier miembro del equipo puede escribir <code>validate-signup</code> en un ticket de Jira y en segundos verá en Slack el contexto del issue, el inicio de la ejecución en Jenkins y el resultado final, todo en el mismo hilo, sin ninguna intervención manual adicional.</p>
-      <p style="margin:0">El siguiente paso es extender el FLOW_MAP con todos los flujos del sistema y activar la Propuesta 1 para cerrar el ciclo de calidad en las liberaciones.</p>
+      <h2>Una estrategia de calidad continua y end-to-end</h2>
+      <p>Las tres propuestas son <strong>complementarias</strong> y cubren el ciclo completo de calidad. La Propuesta 1 valida en el momento de la liberación, la Propuesta 2 integra la cobertura al flujo natural del ticket en Jira, y la Propuesta 3 cierra el ciclo con validaciones directas sobre la base de datos, alineadas al <strong>North Star</strong> de Aplazo.</p>
+      <p style="margin:0">La <strong>Propuesta 2 ya está funcionando</strong> — cuando un ticket pasa a Ready For QA, en segundos el equipo ve en Slack qué suite se ejecutó, sobre qué servicio y cuál fue el resultado, todo automáticamente y en el hilo del issue correspondiente.</p>
     </div>
   </section>
 
