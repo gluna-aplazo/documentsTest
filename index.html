@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Objetivos de Automatización QA – Aplazo</title>
+<title>Automatización QA – Aplazo</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -31,10 +31,17 @@ nav{background:var(--dark);padding:0 32px;display:flex;align-items:center;justif
 .toggle input:checked+.toggle-slider{background:var(--cyan)}
 .toggle input:checked+.toggle-slider::before{transform:translateX(18px);background:#0a1628}
 
+/* HERO */
 .hero{background:#0a1e1f;padding:64px 40px 56px;color:#fff}
 .hero h1{color:#fff;font-size:clamp(1.7rem,4vw,2.9rem);font-weight:800;line-height:1.15;margin-bottom:16px;max-width:820px}
 .hero p{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:700px}
 .badge{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(0,212,216,.15);color:#00D4D8;font-weight:600;font-size:.82rem;border:1px solid rgba(0,212,216,.3);margin-bottom:24px}
+
+/* OBJETIVO PRINCIPAL */
+.goal-banner{background:linear-gradient(135deg,#00D4D8 0%,#008f92 100%);padding:32px 40px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.goal-icon{font-size:2.8rem;flex-shrink:0}
+.goal-text h2{color:#0a1628;font-size:1.4rem;font-weight:800;margin-bottom:6px}
+.goal-text p{color:rgba(10,22,40,.72);font-size:.97rem;max-width:720px}
 
 .stats{background:#007a7d;display:flex;flex-wrap:wrap}
 .stat{flex:1;min-width:150px;padding:20px 28px;border-right:1px solid rgba(255,255,255,.12);color:#fff}
@@ -53,37 +60,49 @@ ul{margin:6px 0 0 20px}
 li{margin:7px 0}
 
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:20px;transition:background .3s,border .3s}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
-.proposal{position:relative;overflow:hidden;padding-left:34px}
-.proposal::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;border-radius:5px 0 0 5px}
-.p1::before{background:linear-gradient(180deg,#00D4D8,#008f92)}
-.p2::before{background:linear-gradient(180deg,#0f766e,#34d399)}
-.p3::before{background:linear-gradient(180deg,#7C3AED,#a78bfa)}
-.ptag{display:inline-block;padding:5px 12px;border-radius:999px;font-weight:700;font-size:.8rem;margin-bottom:12px;border:1px solid}
-.p1 .ptag{background:var(--cyan-soft);color:var(--cyan-dark);border-color:var(--cyan-mid)}
-.p2 .ptag{background:#f0fdf9;color:#0f766e;border-color:#a7f3d0}
-.p3 .ptag{background:#f5f3ff;color:#7C3AED;border-color:#ddd6fe}
-body.dark .p1 .ptag{background:#0d3535;border-color:#1e5557;color:#7ffcfc}
-body.dark .p2 .ptag{background:#0a2620;border-color:#134e40;color:#34d399}
-body.dark .p3 .ptag{background:#1e1040;border-color:#4c3a8a;color:#a78bfa}
+
+/* HITOS ROADMAP */
+.roadmap{display:flex;flex-direction:column;gap:0;margin-top:24px;position:relative}
+.roadmap::before{content:"";position:absolute;left:38px;top:60px;bottom:60px;width:3px;background:linear-gradient(180deg,#00D4D8,#0f766e,#7C3AED);border-radius:2px}
+.hito{display:grid;grid-template-columns:80px 1fr;gap:0;align-items:start;position:relative;z-index:1;margin-bottom:10px}
+.hito-num{width:80px;display:flex;flex-direction:column;align-items:center;padding-top:18px;gap:8px}
+.hito-circle{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;border:3px solid var(--card);box-shadow:0 0 0 3px}
+.h1 .hito-circle{background:#00D4D8;color:#0a1628;box-shadow:0 0 0 3px #00D4D8}
+.h2 .hito-circle{background:#0f766e;color:#fff;box-shadow:0 0 0 3px #0f766e}
+.h3 .hito-circle{background:#7C3AED;color:#fff;box-shadow:0 0 0 3px #7C3AED}
+.hito-connector{width:3px;height:100%;background:transparent;flex:1}
+.hito-body{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px 26px;margin:10px 0 10px 10px;transition:background .3s,border .3s;position:relative}
+.hito-body::before{content:"";position:absolute;left:-9px;top:26px;width:16px;height:16px;background:var(--card);border-left:1px solid var(--border);border-bottom:1px solid var(--border);transform:rotate(45deg);transition:background .3s,border .3s}
+.htag{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-weight:700;font-size:.8rem;margin-bottom:12px;border:1px solid}
+.h1 .htag{background:var(--cyan-soft);color:var(--cyan-dark);border-color:var(--cyan-mid)}
+.h2 .htag{background:#f0fdf9;color:#0f766e;border-color:#a7f3d0}
+.h3 .htag{background:#f5f3ff;color:#7C3AED;border-color:#ddd6fe}
+body.dark .h1 .htag{background:#0d3535;border-color:#1e5557;color:#7ffcfc}
+body.dark .h2 .htag{background:#0a2620;border-color:#134e40;color:#34d399}
+body.dark .h3 .htag{background:#1e1040;border-color:#4c3a8a;color:#a78bfa}
+.hstatus{display:inline-flex;align-items:center;gap:5px;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-left:8px}
+.status-done{background:#dcfce7;color:#166534;border:1px solid #bbf7d0}
+.status-prop{background:#f3f4f6;color:#6b7280;border:1px solid #d1d5db}
+body.dark .status-done{background:#052e16;color:#4ade80;border-color:#166534}
+body.dark .status-prop{background:#1e2a2b;color:#7fb8ba;border-color:#2d4445}
 
 .steps{counter-reset:s;display:grid;gap:10px;margin-top:12px}
 .step{border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 14px 12px 52px;background:var(--cyan-soft);position:relative;font-size:.93rem;transition:background .3s,border .3s}
 body.dark .step{background:#061b1c}
-.step::before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:50%;color:#0a1628;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.88rem}
-.p1 .step::before{background:#00D4D8}
-.p2 .step::before{background:#0f766e;color:#fff}
-.p3 .step::before{background:#7C3AED;color:#fff}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.88rem}
+.h1 .step::before{background:#00D4D8;color:#0a1628}
+.h2 .step::before{background:#0f766e;color:#fff}
+.h3 .step::before{background:#7C3AED;color:#fff}
 
 table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.9rem;border-radius:var(--r-sm);overflow:hidden}
 th,td{padding:11px 14px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
 th{font-weight:700;font-size:.85rem}
-.p1 th{background:var(--cyan-soft);color:var(--cyan-dark)}
-.p2 th{background:#f0fdf9;color:#0f766e}
-.p3 th{background:#f5f3ff;color:#7C3AED}
+.h1 th{background:var(--cyan-soft);color:var(--cyan-dark)}
+.h2 th{background:#f0fdf9;color:#0f766e}
+.h3 th{background:#f5f3ff;color:#7C3AED}
 body.dark th{background:#0d3535;color:#7ffcfc}
-body.dark .p2 th{background:#0a2620;color:#34d399}
-body.dark .p3 th{background:#1e1040;color:#a78bfa}
+body.dark .h2 th{background:#0a2620;color:#34d399}
+body.dark .h3 th{background:#1e1040;color:#a78bfa}
 tr:last-child td{border-bottom:none}
 body.dark td{border-color:#1e4445}
 
@@ -159,10 +178,15 @@ footer{background:var(--dark);color:#7ffcfc;padding:28px 0;text-align:center;fon
 footer strong{color:#fff}
 
 @media(max-width:640px){
+  .roadmap::before{left:19px}
+  .hito{grid-template-columns:44px 1fr}
+  .hito-num{width:44px}
+  .hito-circle{width:32px;height:32px;font-size:.85rem}
   .flow{flex-direction:column;align-items:flex-start}
   .stat{min-width:50%;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .hero{padding:40px 20px 36px}
   .status-flow{flex-direction:column;align-items:flex-start}
+  .goal-banner{padding:24px 20px}
 }
 </style>
 </head>
@@ -181,156 +205,199 @@ footer strong{color:#fff}
 
 <div class="hero">
   <span class="badge">Estrategia de Automatización 2026</span>
-  <h1>Objetivos para automatizar ejecuciones de cobertura y regresión</h1>
-  <p>Tres Objetivos complementarias para acelerar la validación de cambios, fortalecer la trazabilidad entre servicios y flujos funcionales, y mejorar la visibilidad de resultados mediante notificaciones automáticas en Slack.</p>
+  <h1>Tres hitos para automatizar la cobertura y regresión de todos los flujos</h1>
+  <p>Cada hito representa un paso concreto hacia el objetivo principal: eliminar la intervención manual del QA Engineer en la ejecución de pruebas, haciendo que la calidad corra de forma autónoma y continua.</p>
+</div>
+
+<div class="goal-banner">
+  <div class="goal-icon">🎯</div>
+  <div class="goal-text">
+    <h2>Objetivo principal</h2>
+    <p>Automatizar la ejecución de todos los flujos de cobertura y regresión, eliminando la intervención manual del QA Engineer, garantizando validaciones continuas, trazabilidad completa y visibilidad inmediata de resultados en cada cambio del sistema.</p>
+  </div>
 </div>
 
 <div class="stats">
-  <div class="stat"><div class="stat-n">3</div><div class="stat-l">Objetivos complementarias</div></div>
+  <div class="stat"><div class="stat-n">3</div><div class="stat-l">Hitos complementarios</div></div>
   <div class="stat"><div class="stat-n">0</div><div class="stat-l">Disparos manuales requeridos</div></div>
   <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Trazabilidad ticket → resultado</div></div>
+  <div class="stat"><div class="stat-n">↓</div><div class="stat-l">Intervención manual del QA Engineer</div></div>
 </div>
 
 <div class="wrap">
 
+  <!-- CONTEXTO -->
   <section class="section">
     <div class="card">
-      <span class="slabel">Objetivo general</span>
-      <h2>¿Por qué automatizar las ejecuciones?</h2>
-      <p>Actualmente la ejecución de pruebas de cobertura y regresión depende de disparos manuales, lo que genera brechas de validación, falta de visibilidad y retrasos en la detección de defectos. Estas Objetivos buscan integrar la calidad directamente en el proceso de desarrollo y gestión de tickets, haciendo que las pruebas corran automáticamente en el momento correcto y que los resultados lleguen al equipo sin intervención humana.</p>
+      <span class="slabel">Contexto</span>
+      <h2>¿Por qué necesitamos estos hitos?</h2>
+      <p>Actualmente la ejecución de pruebas de cobertura y regresión depende de disparos manuales por parte del QA Engineer. Esto genera brechas de validación, falta de visibilidad y retrasos en la detección de defectos. Los tres hitos que se describen a continuación atacan este problema en capas: el primero integra las pruebas al pipeline de liberación, el segundo las conecta al flujo natural del ticket en Jira, y el tercero cierra el ciclo validando el estado real de los datos en base de datos.</p>
       <div class="metrics">
-        <div class="metric"><strong>Detección temprana</strong><p>Identificar defectos antes de que lleguen a producción.</p></div>
-        <div class="metric"><strong>Trazabilidad completa</strong><p>Relacionar cada cambio con su cobertura ejecutada y el resultado obtenido.</p></div>
-        <div class="metric"><strong>Visibilidad inmediata</strong><p>Notificar a los equipos en tiempo real vía Slack.</p></div>
-        <div class="metric"><strong>Menos carga manual</strong><p>Liberar al equipo de QA de tareas repetitivas de seguimiento.</p></div>
+        <div class="metric"><strong>Detección temprana</strong><p>Defectos detectados antes de llegar a producción, sin que el QA tenga que intervenir.</p></div>
+        <div class="metric"><strong>Trazabilidad completa</strong><p>Cada cambio queda relacionado con su cobertura ejecutada y el resultado obtenido.</p></div>
+        <div class="metric"><strong>Visibilidad inmediata</strong><p>Los equipos reciben notificaciones automáticas en Slack con el resultado de cada ejecución.</p></div>
+        <div class="metric"><strong>Menos carga manual</strong><p>El QA Engineer se enfoca en diseño y análisis, no en ejecutar y monitorear pruebas.</p></div>
       </div>
     </div>
   </section>
 
+  <!-- HITOS -->
   <section class="section">
-    <span class="slabel">Objetivos</span>
-    <div class="grid3">
+    <span class="slabel">Hitos hacia el objetivo</span>
+    <h2 style="margin-bottom:4px">Los tres hitos</h2>
+    <p style="color:var(--muted);margin-bottom:0">Cada hito es independiente pero complementario. Juntos cubren el ciclo completo: liberación → ticket → datos.</p>
 
-      <!-- P1 -->
-      <div class="card proposal p1">
-        <span class="ptag">Objetivo 1</span>
-        <h2>Automatización desde pipelines de liberación</h2>
-        <p>Incorporar un stage dentro del <strong>Jenkinsfile</strong> de cada proyecto. Al momento de hacer una liberación o ejecutar un pipeline en Stage, ese stage disparará automáticamente las pruebas asociadas al componente según la matriz de trazabilidad.</p>
-        <h3>Funcionamiento</h3>
-        <div class="steps p1">
-          <div class="step">Se realiza una liberación o se ejecuta el pipeline en Stage.</div>
-          <div class="step">El stage en el Jenkinsfile invoca las suites vinculadas al proyecto por la matriz de trazabilidad.</div>
-          <div class="step">Al concluir, se envía notificación automática a Slack con resultado, build number y enlace a evidencia.</div>
+    <div class="roadmap">
+
+      <!-- HITO 1 -->
+      <div class="hito h1">
+        <div class="hito-num">
+          <div class="hito-circle">1</div>
         </div>
-        <h3>Matriz de trazabilidad</h3>
-        <table>
-          <thead><tr><th>Servicio</th><th>Flujos impactados</th><th>Cobertura</th></tr></thead>
-          <tbody>
-            <tr><td>Originación</td><td>Signup, validaciones iniciales</td><td>Smoke + regresión crítica</td></tr>
-            <tr><td>Checkout</td><td>Purchase Finance, installments</td><td>Suite principal checkout</td></tr>
-            <tr><td>Disponibilidad</td><td>Product Availability, batch</td><td>Cobertura disponibilidad</td></tr>
-          </tbody>
-        </table>
+        <div class="hito-body h1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+            <span class="htag">🚀 Hito 1 · Pipeline CI/CD</span>
+            <span class="hstatus status-prop">Propuesto</span>
+          </div>
+          <h2>Automatización desde pipelines de liberación</h2>
+          <p>Incorporar un stage dentro del <strong>Jenkinsfile</strong> de cada proyecto. Al ejecutarse un pipeline en Stage o al realizarse una liberación, ese stage dispara automáticamente las pruebas asociadas al componente según la matriz de trazabilidad, sin ninguna acción del QA Engineer.</p>
+
+          <h3>¿Qué resuelve este hito?</h3>
+          <p style="color:var(--muted);font-size:.93rem">Garantiza que ninguna liberación llegue a Stage sin haber ejecutado su cobertura correspondiente. El QA no necesita estar presente para que las pruebas corran.</p>
+
+          <h3>Funcionamiento</h3>
+          <div class="steps h1">
+            <div class="step">El developer hace push o ejecuta el pipeline en Stage.</div>
+            <div class="step">El stage en el Jenkinsfile identifica el servicio y consulta la matriz de trazabilidad.</div>
+            <div class="step">Se invocan automáticamente las suites vinculadas al componente.</div>
+            <div class="step">Al concluir, se envía notificación a Slack con resultado, build number y enlace a evidencia.</div>
+          </div>
+
+          <h3>Matriz de trazabilidad</h3>
+          <table class="h1">
+            <thead><tr><th>Servicio</th><th>Flujos impactados</th><th>Cobertura ejecutada</th></tr></thead>
+            <tbody>
+              <tr><td>Originación</td><td>Signup, validaciones iniciales</td><td>Smoke + regresión crítica</td></tr>
+              <tr><td>Checkout</td><td>Purchase Finance, installments</td><td>Suite principal checkout</td></tr>
+              <tr><td>Disponibilidad</td><td>Product Availability, batch</td><td>Cobertura disponibilidad</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <!-- P2 -->
-      <div class="card proposal p2">
-        <span class="ptag">Objetivo 2</span>
-        <h2>Automatización por cambio de estado en Jira</h2>
-        <p>Crear reglas en <strong>Jira Automation</strong> que disparen las pruebas de cobertura automáticamente cuando un ticket transite del estado <strong>In Progress</strong> al estado <strong>Ready For QA</strong>, ejecutando las suites asociadas al servicio impactado según la matriz de trazabilidad.</p>
-
-        <h3>Disparador de estado</h3>
-        <div class="status-flow">
-          <div class="status-node gray">In Progress</div>
-          <div class="status-arrow">→</div>
-          <div class="status-node trigger">Ready For QA <span style="font-size:.7rem;margin-left:4px">⚡</span></div>
-          <span class="trigger-label">Dispara automatización</span>
+      <!-- HITO 2 -->
+      <div class="hito h2">
+        <div class="hito-num">
+          <div class="hito-circle">2</div>
         </div>
+        <div class="hito-body h2">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+            <span class="htag">✅ Hito 2 · Jira Automation</span>
+            <span class="hstatus status-done">✅ Implementado</span>
+          </div>
+          <h2>Automatización por cambio de estado en Jira</h2>
+          <p>Reglas en <strong>Jira Automation</strong> que disparan las pruebas de cobertura automáticamente cuando un ticket transita de <strong>In Progress</strong> a <strong>Ready For QA</strong>. El QA Engineer recibe el resultado en Slack sin haber ejecutado nada manualmente.</p>
 
-        <h3>Funcionamiento</h3>
-        <div class="steps p2">
-          <div class="step">Un ticket transita de <strong>In Progress</strong> a <strong>Ready For QA</strong> en Jira.</div>
-          <div class="step">La regla identifica el servicio o componente afectado por el ticket.</div>
-          <div class="step">Según la matriz de trazabilidad, se disparan las pruebas de cobertura del servicio correspondiente.</div>
-          <div class="step">Se notifica en Slack qué ejecución se lanzó, sobre qué servicio y el resultado obtenido.</div>
+          <h3>¿Qué resuelve este hito?</h3>
+          <p style="color:var(--muted);font-size:.93rem">Integra la validación al flujo natural de trabajo del equipo. Cada vez que un desarrollador termina una tarea, las pruebas correspondientes se ejecutan solas.</p>
+
+          <h3>Disparador de estado</h3>
+          <div class="status-flow">
+            <div class="status-node gray">In Progress</div>
+            <div class="status-arrow">→</div>
+            <div class="status-node trigger">Ready For QA ⚡</div>
+            <span class="trigger-label">Dispara automatización</span>
+          </div>
+
+          <h3>Funcionamiento</h3>
+          <div class="steps h2">
+            <div class="step">El ticket transita de <strong>In Progress</strong> a <strong>Ready For QA</strong> en Jira.</div>
+            <div class="step">La regla identifica el servicio o componente afectado.</div>
+            <div class="step">Según la matriz de trazabilidad, se disparan las pruebas del servicio correspondiente vía Lambda.</div>
+            <div class="step">El resultado llega automáticamente al hilo de Slack: ✅ SUCCESS o ❌ FAILURE con build number y duración.</div>
+          </div>
+
+          <h3>Relación estado → cobertura ejecutada</h3>
+          <table class="h2">
+            <thead><tr><th>Servicio afectado</th><th>Cobertura disparada</th><th>Job Jenkins</th></tr></thead>
+            <tbody>
+              <tr><td>Originación / Signup</td><td>Smoke signup + regresión crítica</td><td><code>webAutomation</code></td></tr>
+              <tr><td>Checkout</td><td>Suite principal checkout</td><td><code>webAutomation</code></td></tr>
+              <tr><td>Disponibilidad</td><td>Cobertura disponibilidad</td><td><code>webAutomation</code></td></tr>
+            </tbody>
+          </table>
         </div>
-
-        <h3>Relación estado → cobertura ejecutada</h3>
-        <table>
-          <thead><tr><th>Servicio afectado</th><th>Cobertura disparada</th><th>Job Jenkins</th></tr></thead>
-          <tbody>
-            <tr><td>Originación / Signup</td><td>Smoke signup + regresión crítica</td><td><code>webAutomation</code></td></tr>
-            <tr><td>Checkout</td><td>Suite principal checkout</td><td><code>webAutomation</code></td></tr>
-            <tr><td>Disponibilidad</td><td>Cobertura disponibilidad</td><td><code>webAutomation</code></td></tr>
-          </tbody>
-        </table>
       </div>
 
-      <!-- P3 -->
-      <div class="card proposal p3">
-        <span class="ptag">Objetivo 3</span>
-        <h2>API de datos alineada al North Star de Aplazo</h2>
-        <p>Basado en la Objetivo del <strong>North Star</strong> en las metas de Aplazo, se implementaría un nuevo repositorio de servicios que haría consultas directas a la base de datos PostgreSQL según los parámetros recibidos en el request. Esto permitiría a las automatizaciones validar el estado real de los datos en cada ejecución.</p>
+      <!-- HITO 3 -->
+      <div class="hito h3">
+        <div class="hito-num">
+          <div class="hito-circle">3</div>
+        </div>
+        <div class="hito-body h3">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+            <span class="htag">🔮 Hito 3 · API de datos</span>
+            <span class="hstatus status-prop">Propuesto</span>
+          </div>
+          <h2>API de validación de datos alineada al North Star</h2>
+          <p>Un nuevo servicio que realiza consultas directas a la base de datos <strong>PostgreSQL</strong> según los parámetros del caso de prueba. Esto permite a las automatizaciones validar el estado real de los datos en cada ejecución, sin intervención del QA para verificar manualmente la BD.</p>
 
-        <div class="northstar">
-          <h3>Alineación con el North Star</h3>
-          <p>Este servicio habilitaría validaciones de datos reales en cada prueba automatizada, cerrando el ciclo entre la ejecución de pruebas UI/API y la verificación del estado final en base de datos.</p>
-          <div style="margin-top:10px">
-            <span class="ns-pill">Validación de datos reales</span>
-            <span class="ns-pill">Trazabilidad end-to-end</span>
-            <span class="ns-pill">PostgreSQL directo</span>
-            <span class="ns-pill">Parametrizable por request</span>
+          <h3>¿Qué resuelve este hito?</h3>
+          <p style="color:var(--muted);font-size:.93rem">Cierra el ciclo completo de calidad: ya no basta con validar la UI o la respuesta del API; este hito confirma que el dato quedó correctamente persistido en base de datos, eliminando la verificación manual post-ejecución.</p>
+
+          <div class="northstar">
+            <h3>Alineación con el North Star de Aplazo</h3>
+            <p>Este servicio habilita validaciones de datos reales en cada prueba automatizada, cerrando el ciclo entre la ejecución de pruebas UI/API y la verificación del estado final en base de datos.</p>
+            <div style="margin-top:10px">
+              <span class="ns-pill">Validación de datos reales</span>
+              <span class="ns-pill">Trazabilidad end-to-end</span>
+              <span class="ns-pill">PostgreSQL directo</span>
+              <span class="ns-pill">Parametrizable por request</span>
+            </div>
+          </div>
+
+          <h3>Estructura del repositorio</h3>
+          <div class="tree">
+            <div><span class="dir">api-dev-postgres/</span></div>
+            <div>&nbsp;├─ <span class="dir">src/</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">app.js</span> <span class="comment">← Express + middlewares</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">server.js</span> <span class="comment">← levanta el servidor</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">db.js</span> <span class="comment">← conecta a PostgreSQL</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">routes/</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.routes.js</span> <span class="comment">← define endpoints</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">controllers/</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.controller.js</span> <span class="comment">← valida y responde</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">queries/</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.queries.js</span> <span class="comment">← queries SQL</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">middlewares/</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">error.middleware.js</span> <span class="comment">← centraliza errores</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;└─ <span class="dir">utils/</span></div>
+            <div>&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <span class="file">validate.js</span> <span class="comment">← validaciones de params</span></div>
+            <div>&nbsp;├─ <span class="file">.env</span></div>
+            <div>&nbsp;├─ <span class="file">.env.example</span></div>
+            <div>&nbsp;├─ <span class="file">package.json</span></div>
+            <div>&nbsp;└─ <span class="file">README.md</span></div>
+          </div>
+
+          <h3>Funcionamiento</h3>
+          <div class="steps h3">
+            <div class="step">La automatización envía un request con los parámetros del caso de prueba (usuario, transacción, estado esperado).</div>
+            <div class="step">El controller valida los parámetros y ejecuta la query correspondiente en PostgreSQL.</div>
+            <div class="step">El resultado se devuelve al test para validar que el estado en BD sea el esperado.</div>
+            <div class="step">Si hay discrepancia, el test falla con contexto claro del dato incorrecto, sin necesidad de inspección manual.</div>
           </div>
         </div>
-
-        <h3>Estructura del repositorio</h3>
-        <div class="tree">
-          <div><span class="dir">api-dev-postgres/</span></div>
-          <div>&nbsp;├─ <span class="dir">src/</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">app.js</span> <span class="comment">← Express + middlewares</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">server.js</span> <span class="comment">← levanta el servidor</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="file hl">db.js</span> <span class="comment">← conecta a PostgreSQL</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">routes/</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.routes.js</span> <span class="comment">← define endpoints</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">controllers/</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.controller.js</span> <span class="comment">← valida y responde</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">queries/</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">users.queries.js</span> <span class="comment">← queries SQL</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;├─ <span class="dir">middlewares/</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="file">error.middleware.js</span> <span class="comment">← centraliza errores</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;└─ <span class="dir">utils/</span></div>
-          <div>&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <span class="file">validate.js</span> <span class="comment">← validaciones de params</span></div>
-          <div>&nbsp;├─ <span class="file">.env</span></div>
-          <div>&nbsp;├─ <span class="file">.env.example</span></div>
-          <div>&nbsp;├─ <span class="file">package.json</span></div>
-          <div>&nbsp;└─ <span class="file">README.md</span></div>
-        </div>
-
-        <h3>Funcionamiento</h3>
-        <div class="steps p3">
-          <div class="step">La automatización envía un request al servicio con los parámetros del caso de prueba (usuario, transacción, estado esperado).</div>
-          <div class="step">El controller valida los parámetros y ejecuta la query correspondiente en PostgreSQL.</div>
-          <div class="step">El resultado de la consulta se devuelve al test para validar que el estado en base de datos sea el esperado.</div>
-          <div class="step">Si hay discrepancia, el test falla con contexto claro del dato incorrecto en BD.</div>
-        </div>
-
-        <h3>Beneficios</h3>
-        <ul>
-          <li>Validaciones de datos reales sin depender de mocks o stubs.</li>
-          <li>Cierra el ciclo de calidad: UI → API → Base de datos.</li>
-          <li>Parametrizable para cualquier servicio o entidad de Aplazo.</li>
-          <li>Alineado a la visión North Star de trazabilidad end-to-end.</li>
-        </ul>
       </div>
+
     </div>
   </section>
 
-  <!-- DEMO -->
+  <!-- DEMO HITO 2 -->
   <section class="section">
     <div class="demo">
-      <span class="slabel">Implementación demostrada</span>
-      <h2>Notificaciones Slack + Jira Rules en acción</h2>
-      <p class="dlead">La Objetivo 2 fue implementada y validada. El siguiente flujo muestra cómo funciona de extremo a extremo cuando un ticket pasa a Ready For QA.</p>
+      <span class="slabel">Hito 2 en acción</span>
+      <h2>Notificaciones Slack + Jira Rules — ya funciona</h2>
+      <p class="dlead">El Hito 2 fue implementado y validado. El siguiente flujo muestra cómo opera de extremo a extremo cuando un ticket pasa a Ready For QA, sin que el QA Engineer haga nada.</p>
 
       <p style="color:#c4f0f1;font-weight:700;font-size:.88rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em">Flujo técnico</p>
       <div class="flow">
@@ -393,31 +460,33 @@ footer strong{color:#fff}
     </div>
   </section>
 
+  <!-- HISTORIAL HITO 2 -->
   <section class="section">
     <div class="card">
-      <span class="slabel">Historial de implementación</span>
-      <h2>Cómo se construyó la integración (Objetivo 2)</h2>
+      <span class="slabel">Cómo se construyó el Hito 2</span>
+      <h2>Historial de implementación</h2>
       <div class="tl">
         <div class="tli"><div class="tli-t">Jira Automation Rule</div><div class="tli-d">Regla con trigger "Issue status changed" de <strong>In Progress</strong> a <strong>Ready For QA</strong> y acción Send web request apuntando a la Lambda.</div></div>
         <div class="tli"><div class="tli-t">Slack App — Webhook Notificaciones</div><div class="tli-d">App con scopes <code>chat:write</code>, <code>groups:history</code> y <code>channels:read</code> para postear y leer el canal privado.</div></div>
-        <div class="tli"><div class="tli-t">AWS Lambda — jira-slack-bot-trigger</div><div class="tli-d">Lambda en Node.js 20.x con Function URL pública. Recibe el payload de Jira, identifica el servicio, postea en Slack, dispara Jenkins y hace polling del resultado cada 10s.</div></div>
+        <div class="tli"><div class="tli-t">AWS Lambda — jira-slack-bot-trigger</div><div class="tli-d">Lambda en Node.js 20.x con Function URL pública. Recibe el payload de Jira, identifica el servicio, postea en Slack, dispara Jenkins y hace polling del resultado cada 10 segundos.</div></div>
         <div class="tli"><div class="tli-t">Matriz de trazabilidad en FLOW_MAP</div><div class="tli-d">La Lambda contiene el mapeo servicio → tag → job. Al recibir el ticket identifica qué suite ejecutar según el componente afectado.</div></div>
-        <div class="tli"><div class="tli-t">Resultado en Slack</div><div class="tli-d">El mensaje se actualiza automáticamente en el hilo con ✅ SUCCESS / ❌ FAILURE incluyendo build number, duración y link a Jenkins.</div></div>
+        <div class="tli"><div class="tli-t">Resultado en Slack</div><div class="tli-d">El mensaje se actualiza automáticamente en el hilo con ✅ SUCCESS o ❌ FAILURE, incluyendo build number, duración y link a Jenkins.</div></div>
       </div>
     </div>
   </section>
 
+  <!-- COMPARATIVO -->
   <section class="section">
     <div class="card">
       <span class="slabel">Comparativo</span>
-      <h2>Las tres Objetivos</h2>
+      <h2>Los tres hitos de un vistazo</h2>
       <table>
-        <thead><tr><th>Criterio</th><th>P1 · Pipeline</th><th>P2 · Jira Rules</th><th>P3 · API de datos</th></tr></thead>
+        <thead><tr><th>Criterio</th><th>Hito 1 · Pipeline</th><th>Hito 2 · Jira Rules</th><th>Hito 3 · API de datos</th></tr></thead>
         <tbody>
           <tr><td>Disparador</td><td>Stage en Jenkinsfile</td><td>Cambio de estado en Jira</td><td>Request desde la automatización</td></tr>
           <tr><td>Momento</td><td>Durante liberación / Stage</td><td>In Progress → Ready For QA</td><td>Dentro de cada caso de prueba</td></tr>
-          <tr><td>Selección de pruebas</td><td>Matriz de trazabilidad por servicio</td><td>Servicio del ticket + FLOW_MAP</td><td>Query parametrizable por el test</td></tr>
-          <tr><td>Objetivo</td><td>Validación al momento de entrega</td><td>Validación al avanzar el ticket</td><td>Validación de datos en BD</td></tr>
+          <tr><td>Qué valida</td><td>Cobertura del servicio al entregar</td><td>Cobertura del ticket al avanzar</td><td>Estado real del dato en BD</td></tr>
+          <tr><td>Intervención QA</td><td>Ninguna</td><td>Ninguna</td><td>Ninguna</td></tr>
           <tr><td>Alineación</td><td>CI/CD</td><td>Workflow de QA</td><td>North Star Aplazo</td></tr>
           <tr><td>Estado</td><td>Propuesto</td><td><strong>✅ Implementado</strong></td><td>Propuesto</td></tr>
         </tbody>
@@ -425,11 +494,12 @@ footer strong{color:#fff}
     </div>
   </section>
 
+  <!-- DEPENDENCIAS -->
   <section class="section">
     <div class="card">
       <span class="slabel">Requerimientos y dependencias</span>
-      <h2>¿Qué necesitamos para trabajar cualquier Objetivo?</h2>
-      <p>Para llevar a cabo cualquiera de las tres Objetivos se requiere el apoyo coordinado de tres equipos clave. Sin estos apoyos, la implementación no puede avanzar de forma segura ni sostenible.</p>
+      <h2>¿Qué necesitamos para avanzar con los hitos?</h2>
+      <p>Para completar los tres hitos se requiere el apoyo coordinado de tres equipos clave. Sin estos apoyos, la implementación no puede avanzar de forma segura ni sostenible.</p>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px">
 
@@ -443,9 +513,9 @@ footer strong{color:#fff}
           </div>
           <div style="padding:16px 18px;background:var(--card);transition:background .3s">
             <ul style="margin:0 0 0 16px;color:var(--muted)">
-              <li style="margin:8px 0;font-size:.9rem">Cambios en los <strong>Jenkinsfiles</strong> de los repositorios donde se va a trabajar.</li>
+              <li style="margin:8px 0;font-size:.9rem">Cambios en los <strong>Jenkinsfiles</strong> de los repositorios involucrados.</li>
               <li style="margin:8px 0;font-size:.9rem">Apoyo con la configuración y despliegue de <strong>Lambdas</strong>.</li>
-              <li style="margin:8px 0;font-size:.9rem"><strong>Pruebas unitarias</strong> que garanticen que los cambios no impacten el comportamiento actual de los repositorios.</li>
+              <li style="margin:8px 0;font-size:.9rem"><strong>Pruebas unitarias</strong> que garanticen que los cambios no afecten el comportamiento actual de los repositorios.</li>
             </ul>
           </div>
         </div>
@@ -461,7 +531,7 @@ footer strong{color:#fff}
           <div style="padding:16px 18px;background:var(--card);transition:background .3s">
             <ul style="margin:0 0 0 16px;color:var(--muted)">
               <li style="margin:8px 0;font-size:.9rem">Mantenimiento y gestión de <strong>Lambdas</strong> de automatización.</li>
-              <li style="margin:8px 0;font-size:.9rem">Actualización de <strong>frameworks y librerías</strong> para garantizar la correcta ejecución de los casos de prueba existentes y los que se estarán desarrollando.</li>
+              <li style="margin:8px 0;font-size:.9rem">Actualización de <strong>frameworks y librerías</strong> para garantizar la correcta ejecución de los casos de prueba existentes y futuros.</li>
               <li style="margin:8px 0;font-size:.9rem">Soporte técnico continuo sobre las herramientas de automatización del ecosistema Aplazo.</li>
             </ul>
           </div>
@@ -480,7 +550,7 @@ footer strong{color:#fff}
               <li style="margin:8px 0;font-size:.9rem">Acceso o modificación a <strong>repositorios</strong> necesarios para implementar los cambios.</li>
               <li style="margin:8px 0;font-size:.9rem">Gestión de <strong>Lambdas</strong> en el entorno de infraestructura de Aplazo.</li>
               <li style="margin:8px 0;font-size:.9rem">Permisos y configuración en <strong>Jenkins</strong> para los nuevos jobs y stages.</li>
-              <li style="margin:8px 0;font-size:.9rem">Acceso a las <strong>tablas de base de datos en Stage</strong> para las validaciones</li>
+              <li style="margin:8px 0;font-size:.9rem">Acceso a las <strong>tablas de BD en Stage</strong> para las validaciones del Hito 3.</li>
             </ul>
           </div>
         </div>
@@ -488,16 +558,17 @@ footer strong{color:#fff}
       </div>
 
       <div style="margin-top:18px;padding:14px 16px;border-radius:var(--r-sm);background:var(--cyan-soft);border:1px solid var(--cyan-mid);font-size:.9rem;color:var(--muted);transition:background .3s,border .3s">
-        💡 <strong style="color:var(--cyan-dark)">Nota:</strong> Estos apoyos son transversales a las tres Objetivos. Contar con ellos desde el inicio garantiza que la implementación sea segura, sostenible y no genere deuda técnica en los repositorios existentes.
+        💡 <strong style="color:var(--cyan-dark)">Nota:</strong> Estos apoyos son transversales a los tres hitos. Contar con ellos desde el inicio garantiza una implementación segura y sostenible, sin generar deuda técnica en los repositorios existentes.
       </div>
     </div>
   </section>
 
+  <!-- CONCLUSIÓN -->
   <section class="section">
     <div class="card conclusion">
       <span class="slabel">Conclusión</span>
       <h2>Una estrategia de calidad continua y end-to-end</h2>
-      <p>Las tres Objetivos son <strong>importantes</strong> y cumplen el ciclo completo de calidad. La Objetivo 1 valida en el momento de la liberación, la Objetivo 2 integra la cobertura al flujo natural del ticket en Jira, y la Objetivo 3 cierra el ciclo con validaciones directas sobre la base de datos</p>
+      <p>Los tres hitos son complementarios y cubren el ciclo completo de calidad. El <strong>Hito 1</strong> valida en el momento de la liberación, el <strong>Hito 2</strong> integra la cobertura al flujo natural del ticket en Jira —ya implementado y funcionando—, y el <strong>Hito 3</strong> cierra el ciclo con validaciones directas sobre la base de datos. Juntos eliminan la dependencia del QA Engineer para ejecutar, monitorear o verificar pruebas, y convierten la calidad en un proceso continuo y autónomo dentro de Aplazo.</p>
     </div>
   </section>
 
